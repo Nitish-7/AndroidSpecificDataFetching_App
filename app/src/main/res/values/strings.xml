@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">SecqurAIse</string>
+
+    <string name="heading_text">SECQUR<font color="#ff0000" size="35">AI</font>SE</string>
+    <string name="btn_text">Manual Data Refresh</string>
+</resources>

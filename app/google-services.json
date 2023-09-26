@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "793234517086",
+    "firebase_url": "https://secquraise-b769e-default-rtdb.firebaseio.com",
+    "project_id": "secquraise-b769e",
+    "storage_bucket": "secquraise-b769e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:793234517086:android:20d16ce8bb50ca03d358cf",
+        "android_client_info": {
+          "package_name": "com.app.secquraise"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAfv-dWHveHXDzfaUvTSswNPiClwYuRjiY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
