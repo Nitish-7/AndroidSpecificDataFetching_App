@@ -4,6 +4,7 @@ import android.Manifest
 import android.annotation.SuppressLint
 import android.content.pm.PackageManager
 import android.os.Bundle
+import android.text.TextUtils
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
@@ -32,15 +33,6 @@ class MainActivity : AppCompatActivity() {
         binding.lifecycleOwner = this
         binding.viewModel = mainViewModel
         bindObservers()
-    }
-
-    private fun startPeriodicUiUpdate() {
-        CoroutineScope(Dispatchers.Main).launch {
-            while (true){
-                mainViewModel.updateUidata()
-                delay(15 * 60 * 1000)
-            }
-        }
     }
 
     fun bindObservers() {
@@ -101,7 +93,7 @@ class MainActivity : AppCompatActivity() {
                     it.latitude.toString() + " , " + it.longitude.toString()
                 }
                 mainViewModel.location.value = latLong
-                startPeriodicUiUpdate()
+                mainViewModel.startPeriodicUiUpdate()
             }
     }
 

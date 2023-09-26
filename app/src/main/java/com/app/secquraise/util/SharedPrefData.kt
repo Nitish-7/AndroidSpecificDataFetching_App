@@ -35,4 +35,18 @@ class SharedPrefData @Inject constructor(@ApplicationContext context: Context) {
         }
         return userId!!
     }
+
+    fun updateFrequency(value: String) {
+        val editor = sharedPreference.edit()
+        editor.putString(Constant.CAPTURE_FREQUENCY, value)
+        editor.apply()
+    }
+    fun getFrequency(): String {
+        var frequency = sharedPreference.getString(Constant.CAPTURE_FREQUENCY, null)
+        if (frequency == null) {
+            frequency="1"
+            updateFrequency(frequency)
+        }
+        return frequency
+    }
 }

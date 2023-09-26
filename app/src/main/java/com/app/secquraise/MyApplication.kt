@@ -18,8 +18,6 @@ class MyApplication : Application(){
 
         val intentFilter=IntentFilter()
         intentFilter.addAction(Intent.ACTION_BATTERY_CHANGED)
-        intentFilter.addAction(Intent.ACTION_POWER_CONNECTED)
-        intentFilter.addAction(Intent.ACTION_POWER_DISCONNECTED)
 
         registerReceiver(myBroadcastReceiver, intentFilter)
     }

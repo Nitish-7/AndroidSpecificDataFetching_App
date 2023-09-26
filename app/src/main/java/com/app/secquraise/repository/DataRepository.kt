@@ -31,6 +31,7 @@ class DataRepository @Inject constructor(
     val dateTime = MutableLiveData<String>()
     val captureCount = MutableLiveData<String>()
     val locationLiveData = MutableLiveData<String>()
+    var frequency = MutableLiveData<String>(sharedPrefData.getFrequency())
 
     private val internetConnected = MutableLiveData<String>()
     private val batteryCharging = MutableLiveData<String>()
@@ -41,11 +42,16 @@ class DataRepository @Inject constructor(
     }
 
     fun upadateUiData() {
+        updateFrequency()
         updateInternetConnectedStatus()
         updateBatteryStatus()
         updateTimestamp()
         updateCaptureCount()
         setAllCurentUiData()
+    }
+
+    private fun updateFrequency() {
+        sharedPrefData.updateFrequency(frequency.value!!)
     }
 
     private fun updateCaptureCount() {
@@ -89,6 +95,7 @@ class DataRepository @Inject constructor(
 
     fun setAllCurentUiData() {
         val data = UiData(
+            captureFrequency =frequency.value,
             internetConnected = internetConnected.value,
             batteryCharging = batteryCharging.value,
             batteryPercentage = batteryPercentage.value,

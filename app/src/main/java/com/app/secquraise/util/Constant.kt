@@ -2,6 +2,7 @@ package com.app.secquraise.util
 
 class Constant {
     companion object {
+        const val CAPTURE_FREQUENCY = "captureFrequency"
         const val USER_ID="userId"
         const val LOCATION_REFRESH_TIME=15000L
         const val LOCATION_REFRESH_DISTANCE=10f

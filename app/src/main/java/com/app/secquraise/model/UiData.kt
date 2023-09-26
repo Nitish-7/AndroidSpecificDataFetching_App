@@ -8,6 +8,7 @@ import com.app.secquraise.util.Constant
 data class UiData(
     @PrimaryKey(autoGenerate = true)
     var id: Long = 0,
+    var captureFrequency: String?,
     var internetConnected: String?,
     var batteryCharging: String?,
     var batteryPercentage: String?,
