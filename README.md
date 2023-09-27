@@ -17,3 +17,9 @@ Data includes Timestamp, Capture Count, Frequency, Connectivity, Battery Chargin
 * Data Storage and Firebase:All captured data is stored in Firebase, ensuring data retention without overwriting existing data in Firebase Storage or Firestore Database.
 * Locally stored data: Data is retained even if the device restarts when network connectivity is unavailable.
 * Low Battery Notification: A notification is sent to the mobile device if the battery charge falls below 20%.
+
+# App demo :
+https://drive.google.com/file/d/1Ksqk3xDCB4bajc-fbJ2N9gmSJWCMOibN/view?usp=drive_link
+
+# Apk link :
+https://drive.google.com/file/d/1gPSIP5GsRgS4Uzq9ggnkL4SFSkomGmhb/view?usp=drive_link
